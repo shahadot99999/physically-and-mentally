@@ -4,8 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Physciall and Mentally</title>
+
+    <!-- DaisyUi and tailwind link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font awesome icon link -->
+    <script src="https://kit.fontawesome.com/249647ca07.js" crossorigin="anonymous"></script>
+
+
 </head>
 <body>
-    <h1>We are happy to see . this is nice event</h1>
+    
+    <!-- Navbar is started -->
+    <nav class="bg-gray-100 p-4 shadow-md">
+        <div class="container mx-auto flex items-center justify-between">
+            <!-- Left side: Name and Icon -->
+            <div class="flex items-center space-x-2">
+                <img class="w-6 h-6" src="img/Physciall and Mentally.png" alt="icon">
+    
+                <span class="text-lg font-bold text-gray-800">Physciall and Mentally</span>
+            </div>
+    
+            <!-- Middle: Navigation Links -->
+            <div class="hidden md:flex space-x-6">
+                <a href="#" class="text-gray-700 hover:underline">Home</a>
+                <a href="#" class="text-gray-700 hover:underline">About</a>
+                <a href="#" class="text-gray-700 hover:underline">Services</a>
+            </div>
+            <!-- Mobile View: Navigation Links (1 only) -->
+            <div class="flex md:hidden space-x-6">
+                <a href="#" class="text-gray-700 hover:underline">Home</a>
+    
+            </div>
+    
+            <!-- Right side: Sign-Up Button -->
+            <div>
+                <a href="#" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Sign Up</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar is end -->
 </body>
 </html>
