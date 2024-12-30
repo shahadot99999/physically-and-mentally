@@ -8,6 +8,11 @@
     <!-- DaisyUi and tailwind link -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+          darkMode: 'class',
+      };
+  </script>
 
     <!-- Font awesome icon link -->
     <script src="https://kit.fontawesome.com/249647ca07.js" crossorigin="anonymous"></script>
@@ -47,6 +52,8 @@
     <!-- Navbar is end -->
 
 
+  
+
     <!-- different images are different style start -->
      <section>
         <div class="mt-1 container">
@@ -79,5 +86,24 @@
      </section>
 
     <!-- different images are diffferent style end -->
+
+    <section>
+      <!-- Dark / light mode start -->
+      <div class="flex justify-center items-center h-screen">
+        <div class="text-center">
+            <h1 class="text-2xl font-bold mb-4">Light Toggle</h1>
+            <button 
+                id="theme-toggle" 
+                class="btn btn-primary btn-sm"
+            >
+                🌙
+            </button>
+        </div>
+    </div>
+   <!-- Dark / light mode off -->
+   </section>
+   
+
+    <script src="js/darkMode.js"></script>
 </body>
 </html>
