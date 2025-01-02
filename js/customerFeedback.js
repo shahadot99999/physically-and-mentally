@@ -1,48 +1,37 @@
-// document.getElementById('feedback-form').addEventListener('submit', function(event) {
-//     event.preventDefault(); // Prevent the form from refreshing the page
 
-//     // Collect comments and titles
-//     const formData = new FormData(event.target);
-//     const feedback = [];
+    document.getElementById('feedback-form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the form from refreshing the page
 
-//     formData.forEach((value, key) => {
-//         const title = document.querySelector(`[name="${key}"]`).closest('.card-body').querySelector('.card-title').textContent;
-//         feedback.push({ title, comment: value });
-//     });
+        // Collect comments and titles
+        const feedback = [];
 
-//     // Simulate sending feedback (console log for now)
-//     console.log('Customer Feedback:', feedback);
+        document.querySelectorAll('.card-body').forEach((card) => {
+            const title = card.querySelector('.card-title').getAttribute('data-title');
+            const comment = card.querySelector('textarea').value.trim();
 
-//     // Show a confirmation message (optional)
-//     // alert('Thank you for your feedback!');
+            if (comment) { // Only add feedback if a comment is provided
+                feedback.push({ title, comment });
+            }
+        });
 
-//     // Clear the form
-//     event.target.reset();
-// });
+        // Simulate sending feedback (console log for now)
+        console.log('Customer Feedback:', feedback);
 
+        // Dynamically display feedback in HTML
+        const feedbackContainer = document.getElementById('feedback-display');
+        feedbackContainer.innerHTML = ' '; // Clear previous feedback
 
+        feedback.forEach((item) => {
+            const feedbackItem = document.createElement('div');
+            feedbackItem.className = 'p-4 bg-gray-100 rounded-lg shadow mb-4';
+            feedbackItem.innerHTML = `
+                <h3 class="font-bold text-lg">${item.title}</h3>
+                <p class="text-gray-700">${item.comment}</p>
+            `;
+            feedbackContainer.appendChild(feedbackItem);
+        });
 
-document.getElementById('feedback-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent the form from refreshing the page
-
-    // Collect comments and titles
-    const feedback = [];
-
-    document.querySelectorAll('.card-body').forEach((card) => {
-        const title = card.querySelector('.card-title').getAttribute('data-title');
-        const comment = card.querySelector('textarea').value.trim();
-
-        if (comment) { // Only add feedback if a comment is provided
-            feedback.push({ title, comment });
-        }
+        // Clear the form
+        event.target.reset();
     });
 
-    // Simulate sending feedback (console log for now)
-    console.log('Customer Feedback:', feedback);
-
-    // Show a confirmation message (optional)
-    //alert('Thank you for your feedback!');
-
-    // Clear the form
-    event.target.reset();
-});
