@@ -218,7 +218,7 @@
  
    <section>
     <div class="container mx-auto mt-2">
-        <h1 class="text-2xl font-bold mb-4">Exercise Wishlist</h1>
+        <h1 class="text-2xl font-bold mb-4 text-center">Exercise Wishlist</h1>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div class="card bg-white shadow-lg p-4">
@@ -235,12 +235,36 @@
    </section>
    <!-- Shopping Wishlist End -->
 
+   <!-- Interactive Map start -->
+
+   <section class=" ">
+    <div id="map-container" class="container mt-1 mx-auto relative w-full h-screen bg-gray-300">
+        <h1 class="text-2xl text-center font-bold mb-4">Interactive Gym Map </h1>
+        <div class="gym-item absolute w-24 h-24 bg-blue-500 text-white flex items-center justify-center rounded-full cursor-pointer" id="push-ups" style="top: 10%; left: 10%;">Push-Ups</div>
+        <div class="gym-item absolute w-24 h-24 bg-blue-500 text-white flex items-center justify-center rounded-full cursor-pointer" id="pull-ups" style="top: 30%; left: 40%;">Pull-Ups</div>
+        <div class="gym-item absolute w-24 h-24 bg-blue-500 text-white flex items-center justify-center rounded-full cursor-pointer" id="bench-press" style="top: 70%; left: 30%;">Bench Press</div>
+        <div class="gym-item absolute w-24 h-24 bg-blue-500 text-white flex items-center justify-center rounded-full cursor-pointer" id="shoulder-press" style="top: 50%; left: 60%;">Shoulder Press</div>
+        <div class="gym-item absolute w-24 h-24 bg-blue-500 text-white flex items-center justify-center rounded-full cursor-pointer" id="bicep-curls" style="top: 20%; left: 70%;">Bicep Curls</div>
+    </div>
+    
+    <div id="info-box" class="container mt-1 mx-auto fixed bottom-0 left-0 right-0 bg-white p-4 border-t-2 border-blue-500 shadow-md hidden">
+        <h2 id="item-title" class="text-xl font-bold">Exercise Name</h2>
+        <ul id="benefits-list" class="list-disc pl-5">
+            <!-- Benefits will be dynamically populated here -->
+        </ul>
+        <button id="remove-button" class="mt-4 px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600">Remove Item</button>
+    </div>
+   </section>
+
+   <!-- Interactive Map End -->
+
 
    
    
    <script src="js/customerFeedback.js"></script>
     <script src="js/darkMode.js"></script>
     <script src="js/wishList.js"></script>
+    <script src="js/interactiveMap.js"></script>
     
 </body>
 </html>
