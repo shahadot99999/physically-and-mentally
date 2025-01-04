@@ -258,6 +258,52 @@
 
    <!-- Interactive Map End -->
 
+   <!-- Task manager start -->
+
+   <section>
+    <div class="max-w-md mx-auto bg-white shadow-md rounded-lg p-4 mt-1">
+        <h1 class="text-2xl font-bold text-center mb-4">Gym Task Manager</h1>
+        <div class="mb-4">
+          <input 
+            id="task-input" 
+            type="text" 
+            placeholder="Add a task..." 
+            class="input input-bordered w-full" 
+          />
+          <button 
+            id="add-task-btn" 
+            class="btn btn-primary mt-2 w-full"
+          >
+            Add Task
+          </button>
+        </div>
+        <ul id="task-list" class="list-none space-y-3">
+          <!-- Default Tasks -->
+          <li class="flex items-center justify-between p-2 bg-gray-200 rounded">
+            <span>Push-Ups</span>
+            <button class="btn btn-xs btn-error remove-task-btn">Remove</button>
+          </li>
+          <li class="flex items-center justify-between p-2 bg-gray-200 rounded">
+            <span>Pull-Ups</span>
+            <button class="btn btn-xs btn-error remove-task-btn">Remove</button>
+          </li>
+          <li class="flex items-center justify-between p-2 bg-gray-200 rounded">
+            <span>Bench Press</span>
+            <button class="btn btn-xs btn-error remove-task-btn">Remove</button>
+          </li>
+          <li class="flex items-center justify-between p-2 bg-gray-200 rounded">
+            <span>Shoulder Press</span>
+            <button class="btn btn-xs btn-error remove-task-btn">Remove</button>
+          </li>
+          <li class="flex items-center justify-between p-2 bg-gray-200 rounded">
+            <span>Bicep Curls</span>
+            <button class="btn btn-xs btn-error remove-task-btn">Remove</button>
+          </li>
+        </ul>
+      </div>
+   </section>
+   <!-- Task manager End -->
+
 
    
    
@@ -265,6 +311,7 @@
     <script src="js/darkMode.js"></script>
     <script src="js/wishList.js"></script>
     <script src="js/interactiveMap.js"></script>
+    <script src="js/taskManager.js"></script>
     
 </body>
 </html>
