@@ -305,6 +305,38 @@
    <!-- Task manager End -->
 
 
+   <!-- Expense tracker start -->
+   <div class=" w-full container mt-1 mx-auto max-w-2xl p-6 bg-white rounded-lg shadow-md">
+    <h1 class="text-2xl font-bold text-center mb-6">Exercise Tracker</h1>
+
+    <div class="mb-4">
+      <label for="exercise" class="block text-sm font-medium text-gray-700">Select Exercise</label>
+      <select id="exercise" class="w-full mt-1 p-2 border border-gray-300 rounded-md">
+        <option value="Push-ups">Push-ups</option>
+        <option value="Pull-ups">Pull-ups</option>
+        <option value="Bench Press">Bench Press</option>
+        <option value="Dumbbell Shoulder Press">Dumbbell Shoulder Press</option>
+        <option value="Bicep Curls">Bicep Curls</option>
+      </select>
+    </div>
+
+    <div class="mb-4">
+      <label for="count" class="block text-sm font-medium text-gray-700">Reps</label>
+      <input id="count" type="number" placeholder="Enter number of reps" class="w-full mt-1 p-2 border border-gray-300 rounded-md">
+    </div>
+
+    <button id="addButton" class="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600">Add Exercise</button>
+
+    <h2 class="text-xl font-bold mt-6 mb-4">Exercise Log</h2>
+    <ul id="exerciseLog" class="space-y-4">
+      <!-- Log items will appear here -->
+    </ul>
+
+    <button id="clearButton" class="w-full bg-red-500 text-white py-2 px-4 rounded-md hover:bg-red-600 mt-4">Clear Log</button>
+  </div>
+   <!-- Expense tracker end -->
+
+
    
    
    <script src="js/customerFeedback.js"></script>
@@ -312,6 +344,7 @@
     <script src="js/wishList.js"></script>
     <script src="js/interactiveMap.js"></script>
     <script src="js/taskManager.js"></script>
+    <script src="js/expenseTracker.js"></script>
     
 </body>
 </html>
